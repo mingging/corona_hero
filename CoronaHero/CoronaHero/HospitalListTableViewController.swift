@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class HospitalListTableViewController: UITableViewController {
+class HospitalListTableViewController: UITableViewController, UISearchBarDelegate {
         
     var collectionView: UICollectionView?
-    
+    var lblStartInfo: UILabel?
+    let SERVICE_KEY = ""
+    var hospitals: [[String:Any]]?
+
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
@@ -26,6 +31,8 @@ class HospitalListTableViewController: UITableViewController {
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = .white
         }
+        
+        searchBar.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,8 +40,35 @@ class HospitalListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
+    
+    func search(query: String) {
+        lblStartInfo?.isHidden = true
+        let strURL = "https://api.odcloud.kr/api/apnmOrg/v1/list"
+        let params: Parameters = ["serviceKey":SERVICE_KEY, "cond[orgZipaddr::LIKE]":query]
+        let request = AF.request(strURL, method: .get, parameters: params)
+        
+        request.responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let root = JSON(value)
+                self.hospitals = root["data"].arrayObject as? [[String:Any]]
+                print(self.hospitals)
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+            case .failure(let error):
+                if let error = error.errorDescription {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let query = searchBar.text {
+            search(query: query)
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -65,7 +99,7 @@ class HospitalListTableViewController: UITableViewController {
             collectionView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
         }
         
-        
+        self.lblStartInfo = cell.viewWithTag(2) as? UILabel
         
        
         // Configure the cell...
@@ -125,29 +159,50 @@ extension HospitalListTableViewController: UICollectionViewDelegate, UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if let hospitals = self.hospitals {
+            return hospitals.count
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? UICollectionViewCell else {return UICollectionViewCell()}
         
         // cell round 조정
-//        cell.backgroundColor = .white
-//        cell.contentView.layer.cornerRadius = 10
-//        cell.contentView.layer.masksToBounds = false
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOffset = CGSize(width: 1, height: 2)
-//        cell.layer.shadowOpacity = 0.2
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.layer.borderWidth = 1
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
         cell.contentView.layer.masksToBounds = true
 
+        // cell shadow 추가
         cell.layer.shadowColor = UIColor.black.cgColor
         cell.layer.shadowOffset = CGSize(width: 1, height: 2)
         cell.layer.shadowRadius = 10
         cell.layer.shadowOpacity = 0.2
         cell.layer.masksToBounds = false
+        
+        // collection view insert info
+        guard let hospitals = self.hospitals else {return cell}
+        let hospital = hospitals[indexPath.row]
+        
+        let hospital_name = cell.viewWithTag(2) as? UILabel
+        hospital_name?.text = hospital["orgnm"] as? String
+        hospital_name?.textColor = UIColor(hex: "#0080ffff")
+        
+        let hospital_number = cell.viewWithTag(3) as? UILabel
+        hospital_number?.text = hospital["orgTlno"] as? String
+        
+        let hospital_status = cell.viewWithTag(4) as? UILabel
+        let open = hospital["hldyYn"] as? String
+        if open == "N" {
+            hospital_status?.text = "운영중"
+            hospital_status?.textColor = UIColor(hex: "#0080ffff")
+        } else {
+            hospital_status?.text = "휴무일"
+            hospital_status?.textColor = UIColor(hex: "#F94646ff")
+        }
+//        guard let open = open else {return cell}
 
         
         return cell

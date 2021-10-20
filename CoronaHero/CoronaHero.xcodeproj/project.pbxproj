@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		39912FAF271F311300F66A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FAE271F311300F66A8B /* AppDelegate.swift */; };
 		39912FB1271F311300F66A8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FB0271F311300F66A8B /* SceneDelegate.swift */; };
-		39912FB3271F311300F66A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FB2271F311300F66A8B /* ViewController.swift */; };
 		39912FB6271F311300F66A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39912FB4271F311300F66A8B /* Main.storyboard */; };
 		39912FB8271F311600F66A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39912FB7271F311600F66A8B /* Assets.xcassets */; };
 		39912FBB271F311600F66A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39912FB9271F311600F66A8B /* LaunchScreen.storyboard */; };
-		39912FC4271F328F00F66A8B /* HospitalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FC2271F328F00F66A8B /* HospitalListViewController.swift */; };
-		39912FC5271F328F00F66A8B /* HospitalListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39912FC3271F328F00F66A8B /* HospitalListViewController.xib */; };
 		39912FCC271F491E00F66A8B /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */; };
 		39912FCD271F491E00F66A8B /* HospitalListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */; };
-		39912FD6271F64E500F66A8B /* thum_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD5271F64E500F66A8B /* thum_logo.png */; };
+		39912FD8271F667B00F66A8B /* thum_logo_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD7271F667A00F66A8B /* thum_logo_s.png */; };
+		39912FDA271FAE0000F66A8B /* thum_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD9271FAE0000F66A8B /* thum_logo.png */; };
+		39912FDC271FAFA000F66A8B /* SCDream6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39912FDB271FAF9900F66A8B /* SCDream6.otf */; };
 		779326DB5768467E0F54CE32 /* Pods_CoronaHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88067B962385971EDE0150 /* Pods_CoronaHero.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,16 +25,15 @@
 		39912FAB271F311300F66A8B /* CoronaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39912FAE271F311300F66A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39912FB0271F311300F66A8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39912FB2271F311300F66A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39912FB5271F311300F66A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39912FB7271F311600F66A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39912FBA271F311600F66A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39912FBC271F311600F66A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39912FC2271F328F00F66A8B /* HospitalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListViewController.swift; sourceTree = "<group>"; };
-		39912FC3271F328F00F66A8B /* HospitalListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalListViewController.xib; sourceTree = "<group>"; };
 		39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListTableViewController.swift; sourceTree = "<group>"; };
 		39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalListTableViewController.xib; sourceTree = "<group>"; };
-		39912FD5271F64E500F66A8B /* thum_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo.png; sourceTree = "<group>"; };
+		39912FD7271F667A00F66A8B /* thum_logo_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo_s.png; sourceTree = "<group>"; };
+		39912FD9271FAE0000F66A8B /* thum_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo.png; sourceTree = "<group>"; };
+		39912FDB271FAF9900F66A8B /* SCDream6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream6.otf; sourceTree = "<group>"; };
 		7E9C249847FEE95C672B7646 /* Pods-CoronaHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.release.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.release.xcconfig"; sourceTree = "<group>"; };
 		81A1820B384AB65125CB3C4C /* Pods-CoronaHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.debug.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,16 +79,14 @@
 		39912FAD271F311300F66A8B /* CoronaHero */ = {
 			isa = PBXGroup;
 			children = (
+				39912FDB271FAF9900F66A8B /* SCDream6.otf */,
 				39912FCE271F610B00F66A8B /* images */,
 				39912FAE271F311300F66A8B /* AppDelegate.swift */,
 				39912FB0271F311300F66A8B /* SceneDelegate.swift */,
-				39912FB2271F311300F66A8B /* ViewController.swift */,
 				39912FB4271F311300F66A8B /* Main.storyboard */,
 				39912FB7271F311600F66A8B /* Assets.xcassets */,
 				39912FB9271F311600F66A8B /* LaunchScreen.storyboard */,
 				39912FBC271F311600F66A8B /* Info.plist */,
-				39912FC2271F328F00F66A8B /* HospitalListViewController.swift */,
-				39912FC3271F328F00F66A8B /* HospitalListViewController.xib */,
 				39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */,
 				39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */,
 			);
@@ -100,7 +96,8 @@
 		39912FCE271F610B00F66A8B /* images */ = {
 			isa = PBXGroup;
 			children = (
-				39912FD5271F64E500F66A8B /* thum_logo.png */,
+				39912FD9271FAE0000F66A8B /* thum_logo.png */,
+				39912FD7271F667A00F66A8B /* thum_logo_s.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -175,9 +172,10 @@
 			files = (
 				39912FBB271F311600F66A8B /* LaunchScreen.storyboard in Resources */,
 				39912FCD271F491E00F66A8B /* HospitalListTableViewController.xib in Resources */,
-				39912FD6271F64E500F66A8B /* thum_logo.png in Resources */,
+				39912FDC271FAFA000F66A8B /* SCDream6.otf in Resources */,
+				39912FDA271FAE0000F66A8B /* thum_logo.png in Resources */,
+				39912FD8271F667B00F66A8B /* thum_logo_s.png in Resources */,
 				39912FB8271F311600F66A8B /* Assets.xcassets in Resources */,
-				39912FC5271F328F00F66A8B /* HospitalListViewController.xib in Resources */,
 				39912FB6271F311300F66A8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,9 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39912FC4271F328F00F66A8B /* HospitalListViewController.swift in Sources */,
 				39912FCC271F491E00F66A8B /* HospitalListTableViewController.swift in Sources */,
-				39912FB3271F311300F66A8B /* ViewController.swift in Sources */,
 				39912FAF271F311300F66A8B /* AppDelegate.swift in Sources */,
 				39912FB1271F311300F66A8B /* SceneDelegate.swift in Sources */,
 			);
