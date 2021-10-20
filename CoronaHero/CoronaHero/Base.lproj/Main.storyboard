@@ -121,6 +121,9 @@
                                                             <constraint firstItem="KCr-8c-jUP" firstAttribute="top" secondItem="4fG-qH-UWj" secondAttribute="top" id="scj-WJ-2KE"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
+                                                    <connections>
+                                                        <segue destination="nAW-Ff-tYn" kind="show" id="GHF-Xg-Yjn"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -148,24 +151,90 @@
             </objects>
             <point key="canvasLocation" x="69.565217391304358" y="-293.30357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="af8-4k-bpa">
             <objects>
-                <viewController id="nAW-Ff-tYn" sceneMemberID="viewController">
+                <viewController id="nAW-Ff-tYn" customClass="DetailViewController" customModule="CoronaHero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XHj-Uc-POy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qc2-db-8u9">
-                                <rect key="frame" x="18" y="68" width="378" height="102"/>
+                                <rect key="frame" x="18" y="112" width="378" height="102"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thum_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-98-5lJ">
+                                        <rect key="frame" x="20" y="20" width="60" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ZkH-II-b1Z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="희망병원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsW-au-UYo">
+                                        <rect key="frame" x="93" y="20" width="265" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="S-CoreDream-6Bold" family="S-Core Dream" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.50196078430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-804-0002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqv-2e-ZDW">
+                                        <rect key="frame" x="93" y="40.5" width="66" height="12"/>
+                                        <fontDescription key="fontDescription" name="S-CoreDream-6Bold" family="S-Core Dream" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 금천구 시흥대로 244" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98P-av-osw">
+                                        <rect key="frame" x="93" y="55.5" width="265" height="12"/>
+                                        <fontDescription key="fontDescription" name="S-CoreDream-6Bold" family="S-Core Dream" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="운영중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTi-1l-jIi">
+                                        <rect key="frame" x="93" y="75.5" width="32" height="13"/>
+                                        <fontDescription key="fontDescription" name="S-CoreDream-6Bold" family="S-Core Dream" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.50196078430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="378" id="029-tP-gnk"/>
+                                    <constraint firstAttribute="trailing" secondItem="98P-av-osw" secondAttribute="trailing" constant="20" id="3ot-ho-YCe"/>
+                                    <constraint firstItem="dqv-2e-ZDW" firstAttribute="top" secondItem="lsW-au-UYo" secondAttribute="bottom" constant="3" id="7Ba-us-vPn"/>
+                                    <constraint firstItem="lsW-au-UYo" firstAttribute="top" secondItem="Qc2-db-8u9" secondAttribute="top" constant="20" id="B0G-2I-FUW"/>
+                                    <constraint firstItem="dqv-2e-ZDW" firstAttribute="leading" secondItem="CKS-98-5lJ" secondAttribute="trailing" constant="13" id="B89-QU-eM1"/>
+                                    <constraint firstItem="98P-av-osw" firstAttribute="top" secondItem="dqv-2e-ZDW" secondAttribute="bottom" constant="3" id="Lat-CD-geN"/>
+                                    <constraint firstAttribute="bottom" secondItem="CKS-98-5lJ" secondAttribute="bottom" constant="20" id="O3c-XM-lrk"/>
+                                    <constraint firstAttribute="trailing" secondItem="lsW-au-UYo" secondAttribute="trailing" constant="20" id="QVa-fp-DaY"/>
                                     <constraint firstAttribute="height" constant="102" id="Sf8-n8-DE4"/>
-                                    <constraint firstAttribute="width" constant="338" id="w80-CD-QIx"/>
+                                    <constraint firstItem="lsW-au-UYo" firstAttribute="leading" secondItem="CKS-98-5lJ" secondAttribute="trailing" constant="13" id="YZi-d2-f0E"/>
+                                    <constraint firstItem="CKS-98-5lJ" firstAttribute="leading" secondItem="Qc2-db-8u9" secondAttribute="leading" constant="20" id="lEQ-px-0di"/>
+                                    <constraint firstItem="QTi-1l-jIi" firstAttribute="top" secondItem="98P-av-osw" secondAttribute="bottom" constant="8" id="mT3-Mz-7a4"/>
+                                    <constraint firstItem="98P-av-osw" firstAttribute="leading" secondItem="CKS-98-5lJ" secondAttribute="trailing" constant="13" id="oY3-YC-hbB"/>
+                                    <constraint firstItem="CKS-98-5lJ" firstAttribute="top" secondItem="Qc2-db-8u9" secondAttribute="top" constant="20" id="vaP-S2-fdS"/>
+                                    <constraint firstItem="QTi-1l-jIi" firstAttribute="leading" secondItem="CKS-98-5lJ" secondAttribute="trailing" constant="13" id="wgw-gZ-QYD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vze-X1-Ofa">
-                                <rect key="frame" x="38" y="192" width="240" height="128"/>
+                                <rect key="frame" x="20" y="245" width="103" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-sj-DV9">
+                                <rect key="frame" x="291" y="245" width="103" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재 내 위치에서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSQ-R8-vgg">
+                                <rect key="frame" x="18" y="229" width="96" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="S-CoreDream-6Bold" family="S-Core Dream" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHJ-As-iXd">
+                                <rect key="frame" x="0.0" y="356" width="414" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07f-Km-qFC">
+                                <rect key="frame" x="156" y="245" width="103" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -179,10 +248,21 @@
                             <constraint firstItem="OWF-CK-VE1" firstAttribute="trailing" secondItem="Qc2-db-8u9" secondAttribute="trailing" constant="18" id="nj5-ib-Nfc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aQP-gE-j1g"/>
+                    <connections>
+                        <outlet property="hospitalInfoView" destination="Qc2-db-8u9" id="osK-HJ-YS9"/>
+                        <outlet property="lblHospitalAddress" destination="98P-av-osw" id="BEt-Hq-z6s"/>
+                        <outlet property="lblHospitalName" destination="lsW-au-UYo" id="Cud-1g-nRt"/>
+                        <outlet property="lblHospitalNumber" destination="dqv-2e-ZDW" id="ulD-6V-bgq"/>
+                        <outlet property="lblIsOpen" destination="QTi-1l-jIi" id="HC8-DK-HDS"/>
+                        <outlet property="roadCarView" destination="8Eh-sj-DV9" id="lSc-ll-zit"/>
+                        <outlet property="roadTransportView" destination="07f-Km-qFC" id="jn0-ux-4hu"/>
+                        <outlet property="roadWorkView" destination="vze-X1-Ofa" id="Zhk-Oc-jH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KT5-96-Djt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="-293"/>
+            <point key="canvasLocation" x="918.84057971014499" y="-293.30357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z5Z-gm-gQT">

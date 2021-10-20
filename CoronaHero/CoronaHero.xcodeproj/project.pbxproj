@@ -17,6 +17,7 @@
 		39912FD8271F667B00F66A8B /* thum_logo_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD7271F667A00F66A8B /* thum_logo_s.png */; };
 		39912FDA271FAE0000F66A8B /* thum_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD9271FAE0000F66A8B /* thum_logo.png */; };
 		39912FDC271FAFA000F66A8B /* SCDream6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39912FDB271FAF9900F66A8B /* SCDream6.otf */; };
+		3991302427208EA800F66A8B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3991302327208EA800F66A8B /* DetailViewController.swift */; };
 		779326DB5768467E0F54CE32 /* Pods_CoronaHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88067B962385971EDE0150 /* Pods_CoronaHero.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		39912FD7271F667A00F66A8B /* thum_logo_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo_s.png; sourceTree = "<group>"; };
 		39912FD9271FAE0000F66A8B /* thum_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo.png; sourceTree = "<group>"; };
 		39912FDB271FAF9900F66A8B /* SCDream6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream6.otf; sourceTree = "<group>"; };
+		3991302327208EA800F66A8B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7E9C249847FEE95C672B7646 /* Pods-CoronaHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.release.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.release.xcconfig"; sourceTree = "<group>"; };
 		81A1820B384AB65125CB3C4C /* Pods-CoronaHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.debug.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				39912FBC271F311600F66A8B /* Info.plist */,
 				39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */,
 				39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */,
+				3991302327208EA800F66A8B /* DetailViewController.swift */,
 			);
 			path = CoronaHero;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				39912FCC271F491E00F66A8B /* HospitalListTableViewController.swift in Sources */,
 				39912FAF271F311300F66A8B /* AppDelegate.swift in Sources */,
 				39912FB1271F311300F66A8B /* SceneDelegate.swift in Sources */,
+				3991302427208EA800F66A8B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

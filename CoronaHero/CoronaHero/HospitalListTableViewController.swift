@@ -143,15 +143,15 @@ class HospitalListTableViewController: UITableViewController, UISearchBarDelegat
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//
+//    }
+    
     
 }
 
@@ -216,6 +216,16 @@ extension HospitalListTableViewController: UICollectionViewDelegate, UICollectio
     // 옆 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 21
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destVC = segue.destination as? DetailViewController,
+              let indexPath = collectionView?.indexPathsForSelectedItems?.first,
+              let hospitals = self.hospitals
+        else {return}
+        
+        let hospital = hospitals[indexPath.row]
+        destVC.hospital = hospital
     }
     
 }
