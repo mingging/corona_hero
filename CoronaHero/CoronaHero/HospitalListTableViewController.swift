@@ -196,7 +196,7 @@ extension HospitalListTableViewController: UICollectionViewDelegate, UICollectio
         let hospital_status = cell.viewWithTag(4) as? UILabel
         let open = hospital["hldyYn"] as? String
         if open == "N" {
-            hospital_status?.text = "운영중"
+            hospital_status?.text = "운영일"
             hospital_status?.textColor = UIColor(hex: "#0080ffff")
         } else {
             hospital_status?.text = "휴무일"
