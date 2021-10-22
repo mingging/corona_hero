@@ -30,15 +30,10 @@ class HospitalListTableViewController: UITableViewController, UISearchBarDelegat
         searchBar.backgroundImage = UIImage()
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             textfield.backgroundColor = .white
+            textfield.textColor = .black
         }
         
         searchBar.delegate = self
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func search(query: String) {
@@ -68,6 +63,7 @@ class HospitalListTableViewController: UITableViewController, UISearchBarDelegat
         if let query = searchBar.text {
             search(query: query)
         }
+        view.endEditing(true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -96,6 +92,7 @@ class HospitalListTableViewController: UITableViewController, UISearchBarDelegat
             tableView.rowHeight = collectionView.frame.height
             collectionView.clipsToBounds = true
             collectionView.layer.cornerRadius = 30
+            collectionView.layer.backgroundColor = UIColor.lightGray.cgColor
             collectionView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
         }
         
@@ -106,53 +103,7 @@ class HospitalListTableViewController: UITableViewController, UISearchBarDelegat
 
         return cell
     }
-    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
-    // MARK: - Navigation
-
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//
-//    }
-    
-    
 }
 
 extension HospitalListTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -193,17 +144,11 @@ extension HospitalListTableViewController: UICollectionViewDelegate, UICollectio
         let hospital_number = cell.viewWithTag(3) as? UILabel
         hospital_number?.text = hospital["orgTlno"] as? String
         
-        let hospital_status = cell.viewWithTag(4) as? UILabel
-        let open = hospital["hldyYn"] as? String
-        if open == "N" {
-            hospital_status?.text = "운영일"
-            hospital_status?.textColor = UIColor(hex: "#0080ffff")
-        } else {
-            hospital_status?.text = "휴무일"
-            hospital_status?.textColor = UIColor(hex: "#F94646ff")
-        }
-//        guard let open = open else {return cell}
-
+        guard let hospital_status = cell.viewWithTag(4) as? UILabel,
+              let startTime = hospital["sttTm"] as? String,
+              let endTime = hospital["endTm"] as? String
+        else {return cell}
+        hospital_status.text = "\(timeFormatter(time: startTime)) ~ \(timeFormatter(time: endTime))"
         
         return cell
     }

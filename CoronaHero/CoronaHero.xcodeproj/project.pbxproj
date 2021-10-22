@@ -13,7 +13,6 @@
 		39912FB8271F311600F66A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39912FB7271F311600F66A8B /* Assets.xcassets */; };
 		39912FBB271F311600F66A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39912FB9271F311600F66A8B /* LaunchScreen.storyboard */; };
 		39912FCC271F491E00F66A8B /* HospitalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */; };
-		39912FCD271F491E00F66A8B /* HospitalListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */; };
 		39912FD8271F667B00F66A8B /* thum_logo_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD7271F667A00F66A8B /* thum_logo_s.png */; };
 		39912FDA271FAE0000F66A8B /* thum_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39912FD9271FAE0000F66A8B /* thum_logo.png */; };
 		39912FDC271FAFA000F66A8B /* SCDream6.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39912FDB271FAF9900F66A8B /* SCDream6.otf */; };
@@ -54,6 +53,7 @@
 		399130732721CE5800F66A8B /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 399130722721CE5100F66A8B /* libxml2.tbd */; };
 		399130752721CE6400F66A8B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 399130742721CE5E00F66A8B /* libsqlite3.tbd */; };
 		3991307A2721E57200F66A8B /* map_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 399130792721E57200F66A8B /* map_icon.png */; };
+		3991307C2721EFFE00F66A8B /* thum_logo_w.png in Resources */ = {isa = PBXBuildFile; fileRef = 3991307B2721EFFE00F66A8B /* thum_logo_w.png */; };
 		779326DB5768467E0F54CE32 /* Pods_CoronaHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A88067B962385971EDE0150 /* Pods_CoronaHero.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +67,6 @@
 		39912FBA271F311600F66A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39912FBC271F311600F66A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListTableViewController.swift; sourceTree = "<group>"; };
-		39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HospitalListTableViewController.xib; sourceTree = "<group>"; };
 		39912FD7271F667A00F66A8B /* thum_logo_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo_s.png; sourceTree = "<group>"; };
 		39912FD9271FAE0000F66A8B /* thum_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo.png; sourceTree = "<group>"; };
 		39912FDB271FAF9900F66A8B /* SCDream6.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream6.otf; sourceTree = "<group>"; };
@@ -117,6 +116,7 @@
 		399130742721CE5E00F66A8B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		399130762721CEA000F66A8B /* KakaoMapBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KakaoMapBridge.h; sourceTree = "<group>"; };
 		399130792721E57200F66A8B /* map_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_icon.png; sourceTree = "<group>"; };
+		3991307B2721EFFE00F66A8B /* thum_logo_w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thum_logo_w.png; sourceTree = "<group>"; };
 		7E9C249847FEE95C672B7646 /* Pods-CoronaHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.release.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.release.xcconfig"; sourceTree = "<group>"; };
 		81A1820B384AB65125CB3C4C /* Pods-CoronaHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaHero.debug.xcconfig"; path = "Target Support Files/Pods-CoronaHero/Pods-CoronaHero.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,7 +187,6 @@
 				39912FB9271F311600F66A8B /* LaunchScreen.storyboard */,
 				39912FBC271F311600F66A8B /* Info.plist */,
 				39912FCA271F491E00F66A8B /* HospitalListTableViewController.swift */,
-				39912FCB271F491E00F66A8B /* HospitalListTableViewController.xib */,
 				3991302327208EA800F66A8B /* DetailViewController.swift */,
 				399130762721CEA000F66A8B /* KakaoMapBridge.h */,
 			);
@@ -197,6 +196,7 @@
 		39912FCE271F610B00F66A8B /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3991307B2721EFFE00F66A8B /* thum_logo_w.png */,
 				399130792721E57200F66A8B /* map_icon.png */,
 				39912FD9271FAE0000F66A8B /* thum_logo.png */,
 				39912FD7271F667A00F66A8B /* thum_logo_s.png */,
@@ -335,7 +335,6 @@
 				3991304C2721CE0200F66A8B /* map_pinup_custom@3x.png in Resources */,
 				39912FBB271F311600F66A8B /* LaunchScreen.storyboard in Resources */,
 				3991304D2721CE0200F66A8B /* map_pin_custom.png in Resources */,
-				39912FCD271F491E00F66A8B /* HospitalListTableViewController.xib in Resources */,
 				399130532721CE0200F66A8B /* map_pin_shadow@3x.png in Resources */,
 				3991305A2721CE0200F66A8B /* map_pin_red.png in Resources */,
 				3991305F2721CE0200F66A8B /* noimage256.png in Resources */,
@@ -357,6 +356,7 @@
 				399130512721CE0200F66A8B /* map_pin_custom@3x.png in Resources */,
 				39912FD8271F667B00F66A8B /* thum_logo_s.png in Resources */,
 				399130632721CE0200F66A8B /* noimage.png in Resources */,
+				3991307C2721EFFE00F66A8B /* thum_logo_w.png in Resources */,
 				39912FB8271F311600F66A8B /* Assets.xcassets in Resources */,
 				399130642721CE0200F66A8B /* map_present_background_update.png in Resources */,
 				399130652721CE0200F66A8B /* daum_th_line.png in Resources */,

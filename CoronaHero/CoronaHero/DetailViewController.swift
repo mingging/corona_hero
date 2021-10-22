@@ -75,20 +75,6 @@ class DetailViewController: UIViewController {
         getGeo(query: hospitalAddress)
     }
     
-    // 시간 중간에 : 표시하기
-    func timeFormatter(time: String) -> String {
-        let array = Array(time)
-        var temp = ""
-        for i in 0..<array.count {
-            if (i == 1) {
-                temp += "\(array[i]):"
-            } else {
-                temp += "\(array[i])"
-            }
-        }
-        return temp
-    }
-    
     func getGeo(query: String) {
         let strURL = "https://dapi.kakao.com/v2/local/search/address.json"
         let params: Parameters = ["query":query]
@@ -120,16 +106,17 @@ class DetailViewController: UIViewController {
         }
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+// 시간 중간에 : 표시하기
+func timeFormatter(time: String) -> String {
+    let array = Array(time)
+    var temp = ""
+    for i in 0..<array.count {
+        if (i == 1) {
+            temp += "\(array[i]):"
+        } else {
+            temp += "\(array[i])"
+        }
     }
-    */
-
+    return temp
 }
